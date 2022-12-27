@@ -12,7 +12,7 @@ public class RegularExpression {
 	Scanner input = new Scanner(System.in);
 
 	public String validFirstName() {
-		System.out.print("Enter first name (First letter Upper case and minimum three letters) : ");
+		System.out.print("Enter first name that contains minimum one upper case : ");
 		String firstName = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(firstName).matches();
 		if (status == true) {
@@ -25,7 +25,7 @@ public class RegularExpression {
 	}
 
 	public String validLastName() {
-		System.out.print("Enter last name (First letter Upper case and minimum three letters) : ");
+		System.out.print("Enter last name that contains minimum one uper case and there letter : ");
 		String lastName = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(lastName).matches();
 		if (status == true) {
@@ -103,7 +103,7 @@ public class RegularExpression {
 	}
 
 	public String valid_email() {
-		System.out.print("Enter valid email : ");
+		System.out.print("Enter valid email ID : ");
 		String email = input.next();
 		boolean status = Pattern.compile("[a-z]{2,20}[0-9]{0,5}[@]{1}[gmail]{5}[.]{1}[com]{3}").matcher(email)
 				.matches();

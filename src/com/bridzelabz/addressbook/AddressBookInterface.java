@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public interface AddressBookInterface {
 	/**
-	 * Abstract methods for address book class
+	 * Abstract methods for addressbooks class
 	 */
 	void addContactDetails();
 

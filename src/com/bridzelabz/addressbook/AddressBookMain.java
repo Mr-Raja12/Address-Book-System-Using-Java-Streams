@@ -38,7 +38,7 @@ public class AddressBookMain {
                     break;
             }
             System.out.println("1.Don't Exit  2.Exit ");
-            System.out.print("Enter the choice : ");
+            System.out.print("Enter the Choice : ");
             option = input.nextInt();
 
         } while (option == 1);
