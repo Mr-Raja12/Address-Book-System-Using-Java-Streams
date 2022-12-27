@@ -1,7 +1,6 @@
 package com.bridzelabz.addressbook;
 
 import java.util.ArrayList;
-
 /**
  * 
  * @author Raja
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 
 public interface AddressBookInterface {
 	/**
-	 * Abstract methods for adressbook class
+	 * Abstract methods for addressbook class
 	 */
 	void addContactDetails();
 

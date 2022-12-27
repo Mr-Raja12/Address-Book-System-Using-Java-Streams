@@ -2,13 +2,19 @@ package com.bridzelabz.addressbook;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
+/**
+ * 
+ * @author Raja
+ *
+ */
 
 public class AddressBooks {
 	/**
-	 * Create hash map to store multiple books
+	 * Creating a Hashmap for contact details
 	 */
-	HashMap<String, ArrayList> map = new HashMap<>();
+	HashMap<String, List> books = new HashMap<>();
 	AddressBookMain main = new AddressBookMain();
 	Scanner input = new Scanner(System.in);
 
@@ -26,8 +32,9 @@ public class AddressBooks {
 			if (number == 1) {
 				System.out.print("Enter address book name : ");
 				String name = input.next();
-				if (map.containsKey(name) == false) {
-					map.put(name, main.manageContactDetails());
+				if (books.containsKey(name) == false) {
+					books.put(name, main.manageContactDetails());
+
 				} else {
 					System.out.println(name + " book is already exits");
 				}
@@ -35,7 +42,43 @@ public class AddressBooks {
 				break;
 			}
 		}
-		System.out.println(map);
+		System.out.println(books);
+		System.out.println("1.Search in city");
+		System.out.println("2.Search in state");
+		System.out.println("3.Exit");
+		System.out.println();
+		System.out.print("Enter option : ");
+		int option = input.nextInt();
+		while (option != 3) {
+			switch (option) {
+			case 1:
+				System.out.print("Enter city name : ");
+				String cityName = input.next();
+				for (List contact : books.values()) {
+					List<ContactDetails> list = contact;
+					list.stream().filter(city -> city.getCity().equalsIgnoreCase(cityName))
+							.forEach(x -> System.out.println(x));
+				}
+				break;
+			case 2:
+				System.out.print("Enter State name : ");
+				String stateName = input.next();
+				for (List contact : books.values()) {
+					List<ContactDetails> list = contact;
+					list.stream().filter(city -> city.getState().equalsIgnoreCase(stateName))
+							.forEach(x -> System.out.println(x));
+				}
+				break;
+			default:
+				System.out.println("Enter correct value");
+
+			}
+			System.out.println("1.Search in city");
+			System.out.println("2.Search in state");
+			System.out.println("3.Exit");
+			System.out.print("Enter option : ");
+			option = input.nextInt();
+		}
 	}
 
 	public static void main(String[] args) {
