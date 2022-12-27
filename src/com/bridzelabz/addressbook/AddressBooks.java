@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+
 /**
  * 
  * @author Raja
@@ -45,11 +46,12 @@ public class AddressBooks {
 		System.out.println(books);
 		System.out.println("1.Search in city");
 		System.out.println("2.Search in state");
-		System.out.println("3.Exit");
+		System.out.println("3.Search person");
+		System.out.println("4.Exit");
 		System.out.println();
 		System.out.print("Enter option : ");
 		int option = input.nextInt();
-		while (option != 3) {
+		while (option != 4) {
 			switch (option) {
 			case 1:
 				System.out.print("Enter city name : ");
@@ -65,7 +67,16 @@ public class AddressBooks {
 				String stateName = input.next();
 				for (List contact : books.values()) {
 					List<ContactDetails> list = contact;
-					list.stream().filter(city -> city.getState().equalsIgnoreCase(stateName))
+					list.stream().filter(state -> state.getState().equalsIgnoreCase(stateName))
+							.forEach(x -> System.out.println(x));
+				}
+				break;
+			case 3:
+				System.out.print("Enter person first name : ");
+				String firstName = input.next();
+				for (List contact : books.values()) {
+					List<ContactDetails> list = contact;
+					list.stream().filter(name -> name.getFirstName().equalsIgnoreCase(firstName))
 							.forEach(x -> System.out.println(x));
 				}
 				break;
@@ -75,7 +86,8 @@ public class AddressBooks {
 			}
 			System.out.println("1.Search in city");
 			System.out.println("2.Search in state");
-			System.out.println("3.Exit");
+			System.out.println("3.Search person");
+			System.out.println("4.Exit");
 			System.out.print("Enter option : ");
 			option = input.nextInt();
 		}

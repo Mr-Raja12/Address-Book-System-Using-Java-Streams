@@ -8,12 +8,11 @@ import java.util.regex.Pattern;
  * @author Raja
  *
  */
-
 public class RegularExpression {
 	Scanner input = new Scanner(System.in);
 
 	public String validFirstName() {
-		System.out.print("Enter first name as minimum one letter should be uppper case : ");
+		System.out.print("Enter first name (First letter Upper case and minimum three letters) : ");
 		String firstName = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(firstName).matches();
 		if (status == true) {
@@ -26,53 +25,53 @@ public class RegularExpression {
 	}
 
 	public String validLastName() {
-		System.out.print("Enter last name as First letter Upper case and minimum three letters : ");
+		System.out.print("Enter last name (First letter Upper case and minimum three letters) : ");
 		String lastName = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(lastName).matches();
 		if (status == true) {
 			System.out.println(lastName + " is valid last name");
 		} else {
 			System.out.println(lastName + " is not valid last name");
-			validFirstName();
+			validLastName();
 		}
 		return lastName;
 	}
 
 	public String validAddress() {
-		System.out.print("Enter Address as First letter Upper case and minimum three letters : ");
+		System.out.print("Enter Address (First letter Upper case and minimum three letters) : ");
 		String address = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(address).matches();
 		if (status == true) {
 			System.out.println(address + " is valid address");
 		} else {
 			System.out.println(address + " is not valid address");
-			validFirstName();
+			validAddress();
 		}
 		return address;
 	}
 
 	public String validCity() {
-		System.out.print("Enter city asFirst letter Upper case and minimum three letters : ");
+		System.out.print("Enter city (First letter Upper case and minimum three letters) : ");
 		String city = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(city).matches();
 		if (status == true) {
 			System.out.println(city + " is valid city");
 		} else {
 			System.out.println(city + " is not valid city");
-			validFirstName();
+			validCity();
 		}
 		return city;
 	}
 
 	public String validState() {
-		System.out.print("Enter state as First letter Upper case and minimum three letters : ");
+		System.out.print("Enter state (First letter Upper case and minimum three letters) : ");
 		String state = input.next();
 		boolean status = Pattern.compile("[A-Z]{1}[a-z]{2,15}").matcher(state).matches();
 		if (status == true) {
 			System.out.println(state + " is valid state");
 		} else {
 			System.out.println(state + " is not valid state");
-			validFirstName();
+			validState();
 		}
 		return state;
 	}
@@ -85,7 +84,7 @@ public class RegularExpression {
 			System.out.println(zip + " is valid zip");
 		} else {
 			System.out.println(zip + " is not valid zip");
-			validFirstName();
+			validZip();
 		}
 		return zip;
 	}
@@ -98,13 +97,13 @@ public class RegularExpression {
 			System.out.println(mobileNumber + " is valid mobile number");
 		} else {
 			System.out.println(mobileNumber + " is not valid mobile number");
-			validFirstName();
+			validMobileNumber();
 		}
 		return mobileNumber;
 	}
 
 	public String valid_email() {
-		System.out.print("Enter email (rajabaitha0218@gmail.com) : ");
+		System.out.print("Enter valid email : ");
 		String email = input.next();
 		boolean status = Pattern.compile("[a-z]{2,20}[0-9]{0,5}[@]{1}[gmail]{5}[.]{1}[com]{3}").matcher(email)
 				.matches();
@@ -112,9 +111,8 @@ public class RegularExpression {
 			System.out.println(email + " is valid email");
 		} else {
 			System.out.println(email + " is not valid email");
-			validFirstName();
+			valid_email();
 		}
 		return email;
 	}
-
 }

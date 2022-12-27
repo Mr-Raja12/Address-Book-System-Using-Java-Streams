@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class AddressBook implements AddressBookInterface {
     /**
-     * ability to manage the contact details
+     * Manage the contact details
      */
     Scanner input = new Scanner(System.in);
     ContactDetails details = new ContactDetails();

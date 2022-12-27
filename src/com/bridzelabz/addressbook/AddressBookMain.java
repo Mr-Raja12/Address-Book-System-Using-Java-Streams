@@ -37,7 +37,7 @@ public class AddressBookMain {
                     System.out.println("Enter valid details");
                     break;
             }
-            System.out.println("1.Don't exit  2.Exit ");
+            System.out.println("1.Don't Exit  2.Exit ");
             System.out.print("Enter the choice : ");
             option = input.nextInt();
 
