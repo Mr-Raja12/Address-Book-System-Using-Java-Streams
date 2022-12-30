@@ -89,6 +89,7 @@ public class ContactDetails {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
+
 	public ContactDetails() {
 	}
 
