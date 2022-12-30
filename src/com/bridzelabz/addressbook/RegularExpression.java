@@ -4,16 +4,17 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * 
  * @author Raja
- *
  */
 public class RegularExpression {
-	Scanner input = new Scanner(System.in);
+    /**
+     * Regular Expression for user details
+     */
+    Scanner input = new Scanner(System.in);
 
     public String validFirstName() {
         /**
-         * create a regular expression for user first name
+         * Regex for first name
          * This method return first name
          */
         System.out.print("Enter first name (First letter Upper case and minimum three letters) : ");
@@ -23,7 +24,7 @@ public class RegularExpression {
             System.out.println(firstName + " is valid first name");
         } else {
             System.out.println(firstName + " is not valid first name");
-            validFirstName();
+            firstName = validFirstName();
         }
         return firstName;
     }
@@ -40,7 +41,7 @@ public class RegularExpression {
             System.out.println(lastName + " is valid last name");
         } else {
             System.out.println(lastName + " is not valid last name");
-            validLastName();
+            lastName = validLastName();
         }
         return lastName;
     }
@@ -57,7 +58,7 @@ public class RegularExpression {
             System.out.println(address + " is valid address");
         } else {
             System.out.println(address + " is not valid address");
-            validAddress();
+            address = validAddress();
         }
         return address;
     }
@@ -74,7 +75,7 @@ public class RegularExpression {
             System.out.println(city + " is valid city");
         } else {
             System.out.println(city + " is not valid city");
-            validCity();
+            city = validCity();
         }
         return city;
     }
@@ -91,7 +92,7 @@ public class RegularExpression {
             System.out.println(state + " is valid state");
         } else {
             System.out.println(state + " is not valid state");
-            validState();
+            state = validState();
         }
         return state;
     }
@@ -108,7 +109,7 @@ public class RegularExpression {
             System.out.println(zip + " is valid zip");
         } else {
             System.out.println(zip + " is not valid zip");
-            validZip();
+            zip = validZip();
         }
         return zip;
     }
@@ -125,7 +126,7 @@ public class RegularExpression {
             System.out.println(mobileNumber + " is valid mobile number");
         } else {
             System.out.println(mobileNumber + " is not valid mobile number");
-            validMobileNumber();
+            mobileNumber = validMobileNumber();
         }
         return mobileNumber;
     }
@@ -135,14 +136,14 @@ public class RegularExpression {
          * create a regular expression for user email address
          * This method return email
          */
-        System.out.print("Enter email (govardhan1998@gmail.com) : ");
+        System.out.print("Enter email (rajabaitha0218@gmail.com) : ");
         String email = input.next();
         boolean status = Pattern.compile("[a-z]{2,20}[0-9]{0,5}[@]{1}[gmail]{5}[.]{1}[com]{3}").matcher(email).matches();
         if (status == true) {
             System.out.println(email + " is valid email");
         } else {
             System.out.println(email + " is not valid email");
-            valid_email();
+            email = valid_email();
         }
         return email;
     }

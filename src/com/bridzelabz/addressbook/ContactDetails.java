@@ -2,7 +2,7 @@ package com.bridzelabz.addressbook;
 
 /**
  * 
- * @author Rajaa
+ * @author Raja
  *
  */
 

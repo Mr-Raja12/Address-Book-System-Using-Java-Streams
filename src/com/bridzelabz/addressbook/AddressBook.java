@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * 
- * @author Raja
+ * @author Rajaa
  *
  */
 
@@ -22,7 +22,7 @@ public class AddressBook implements AddressBookInterface {
     @Override
     public void addContactDetails() {
         /**
-         * add user details to particular address book
+         * Adding the user details
          * use regular expression class method take inputs from console
          * this method take unique first name
          */
@@ -88,7 +88,7 @@ public class AddressBook implements AddressBookInterface {
     @Override
     public void deleteContactDetails() {
         /**
-         * this method is used to delete particular user detail use their first name
+         * Delete the contact using first name
          */
         System.out.print("Enter first name : ");
         String firstName = input.next();
